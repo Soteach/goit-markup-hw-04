@@ -12,7 +12,6 @@ font-family: 'Roboto', monotype;
 color: var(--main-font-color);
 }
 
-
 p,h1,h2,h3,h4,h5,h6 {
     margin: 0;
 }
@@ -38,7 +37,7 @@ img{
     padding-left: 15px;
     padding-right: 15px;
     min-height: 80px; 
-    outline: solid 2px red ;
+    /* outline: solid 2px red ; */
 }
 
 .header {
@@ -115,13 +114,10 @@ border-bottom: solid 1px #ECECEC;
     fill:currentColor;
 }
 
-
-
 .head-envelope {
     
     margin-right: 10px;
-    fill:currentColor;
-    
+    fill:currentColor;   
 }
 
 .contacts:hover, :focus{
@@ -150,10 +146,13 @@ border-bottom: solid 1px #ECECEC;
     align-items: center;
 }
 
+.link-port:hover, :focus {
+    color:var(--accent-color)
+}
+
 .header-connect {
     display: flex;
-    margin-left:auto;
-    
+    margin-left:auto;   
 }
 
 .nav-link:hover, :focus {
@@ -163,8 +162,6 @@ border-bottom: solid 1px #ECECEC;
 .current {
     color:var(--accent-color)
 }
-
-
 
 /* HERO */
 .hero {
@@ -291,8 +288,7 @@ border-bottom: solid 1px #ECECEC;
 }
 
 .spec-list .list {
-    min-width: 270px;
-    
+    min-width: 270px;   
 }
 
 
@@ -309,7 +305,6 @@ border-bottom: solid 1px #ECECEC;
     margin-right: 30px;
 }
 
-
 /* WHAT ARE WE DOING */
 .section-header {
     font-weight: 700;
@@ -324,7 +319,6 @@ border-bottom: solid 1px #ECECEC;
 .work{
     padding-bottom: 94px;
 }
-
 /* FULLY-HIDDEN
 .news-group {
     visibility: hidden;
@@ -338,12 +332,10 @@ border-bottom: solid 1px #ECECEC;
     margin-right: 30px;
 }
 
-
 .work.container{
     padding-top: 94px;
     padding-bottom: 94px;
 }
-
 
 /* TEAM */
 
@@ -366,7 +358,6 @@ border-bottom: solid 1px #ECECEC;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
-
 
 .card-image {
     max-width: 100%;
@@ -437,8 +428,7 @@ border-bottom: solid 1px #ECECEC;
     background-color: var(--accent-color);
 }
 
-.social-links:hover .worker-soc-icon
-{
+.social-links:hover .worker-soc-icon{
     fill:#FFFFFF;
 }
 
@@ -509,18 +499,8 @@ border-bottom: solid 1px #ECECEC;
 .footer {
     padding-top: 60px;
     padding-bottom: 60px;
-}
-
-.contact-wrap {
-    width: 1600px;
-    margin: 0 auto;
     background-color: var(--hero-color);
 }
-
-.contact-wrap.container {
-
-}
-
 
 .logo-link-footer {
 font-family: 'Raleway', sans-serif;
@@ -534,7 +514,6 @@ font-family: 'Raleway', sans-serif;
 .logo-link-footer:hover,:focus {
     color: var(--accent-color);
 }
-
 
 .footer-part-logo {
     font-family: 'Raleway', sans-serif;
@@ -583,11 +562,63 @@ address {
     margin-bottom: 10px;
 }
 
-
 .adress {
     margin-bottom: 10px;
 }
 
+.social-network-footer{
+    display: flex;
+    flex-direction: column;
+    margin-left: 70px;
+    
+}
+
+.join{
+    margin-top: 10;
+    margin-bottom: 0;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16/14);
+    text-transform: uppercase;
+    color: var(--main-white-color);
+
+}
+
+.contact-wrap.container {
+    display: flex;
+}
+
+.social-network-list{
+    display: flex;
+    margin-top: 20px;
+}
+
+.social-network-list .social-links {
+padding: 12px;
+width: 44px;
+height: 44px;
+display: block;
+border-radius: 50%;
+background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-links:hover,
+.social-links:focus{
+    background-color: var(--accent-color);
+}
+
+.social-links:hover .worker-soc-icon
+{
+    fill:#FFFFFF;
+}
+
+.social-links:focus .worker-soc-icon {
+    fill:#FFFFFF;
+}
+
+.footer-link:hover{
+    color:var(--accent-color)
+}
 
 /* PORTFOLIO.HTML */
 
@@ -609,6 +640,8 @@ address {
     .main-button:hover,:focus {
     background: var(--accent-color);
     color: var(--main-white-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
 }
 
     .btn-group {
@@ -674,4 +707,12 @@ address {
 
 .cards-footer {
     padding:20px 24px 20px 24px;
+    border-left:solid 1px #eee;
+    border-right:solid 1px #eee;
+}
+
+.work-items:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+    0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    cursor: pointer;
 }
