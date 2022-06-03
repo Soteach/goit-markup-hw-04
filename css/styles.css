@@ -93,7 +93,7 @@ border-bottom: solid 1px #ECECEC;
 }
 
 .contacts {
-    display: inline-block;
+    display: flex;
     font-weight: 500;
     font-size: 14px;
     line-height: calc(16/14);
@@ -101,12 +101,8 @@ border-bottom: solid 1px #ECECEC;
     color: #757575;
     padding-top: 15px;
     padding-bottom: 15px;
+    align-items: center;
     
-}
-
-.contacts.mail,
-.contacts.phone{
-    display: flex;
 }
 
 .contacts.mail {
@@ -115,19 +111,22 @@ border-bottom: solid 1px #ECECEC;
 
 .head-phone {
     margin-right: 10px;
-}
-
-.head-envelope {
-    display: block;
-    margin-right: 10px;
+    align-items: center;
     fill:currentColor;
 }
 
-.contacts:hover,:focus {
-color: var(--accent-color);
+
+
+.head-envelope {
+    
+    margin-right: 10px;
+    fill:currentColor;
+    
 }
 
-
+.contacts:hover, :focus{
+    color: var(--accent-color);
+}
 
 .site-nav {
     display: flex;
@@ -157,9 +156,15 @@ color: var(--accent-color);
     
 }
 
+.nav-link:hover, :focus {
+    color: var(--accent-color);
+}
+
 .current {
     color:var(--accent-color)
 }
+
+
 
 /* HERO */
 .hero {
@@ -226,12 +231,6 @@ color: var(--accent-color);
     color: var(--header-color);
     margin-bottom: 10px;
 }
-
-/* .list-spec {
-    display:flex;
-    flex-direction: column;
-    border-color:var(--main-font-color);
-} */
 
 .main-font {
     font-size: 14px;
@@ -345,66 +344,7 @@ color: var(--accent-color);
     padding-bottom: 94px;
 }
 
-/* OUR-CLIENTS */
 
-.our-company{
-    display: flex;
-}
-
-.clients {
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
-
-.client-item:not(:last-child) {
-    margin-right: 30px;
-}
-
-.clients-icon{
-    width: 170px;
-    height: 92px; 
-    margin-left: auto;
-    margin-right: auto;
-    height: 41px;
-    width: 47px;
-}
-.client-link svg{
-    fill: #AFB1B8;
-    width: 100%;
-    height: 100%;
-}
-
-.client-link{
-    display: flex;
-    width: 170px;
-    height: 92px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #AFB1B8;
-    border-radius: 4px;
-    
-}
-.clients-icon{
-    padding: 16px 32px;
-}
-
-
-.client-link:hover{
-    fill: var(--accent-color);
-    border-color: var(--accent-color);
-}
-.company-one::hover {
-    color: var(--accent-color);
-
-}
-
-
-svg:hover ,
-svg:focus {
-    fill:var(--accent-color);
-    border-color: var(--accent-color);
-}
 /* TEAM */
 
 .team {
@@ -435,7 +375,7 @@ svg:focus {
 
 .card-header {
     margin: 0;
-    padding-top: 30px;
+    padding:30px 0;
     background-color: var(--main-white-color);
     border-radius: 0px 0px 4px 4px;
 }
@@ -463,12 +403,125 @@ svg:focus {
     padding-bottom: 30px;
 }
 
+.social-network-list {
+    display: flex;
+    justify-content: center;
+}
+
+.soc-item{
+    width: 44px;
+    height: 44px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.soc-item:last-child{
+    margin-right: 0;
+}
+
+.social-links{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.worker-soc-icon {
+    fill:#AFB1B8;
+}
+
+.social-links:hover,
+.social-links:focus{
+    background-color: var(--accent-color);
+}
+
+.social-links:hover .worker-soc-icon
+{
+    fill:#FFFFFF;
+}
+
+.social-links:focus .worker-soc-icon {
+    fill:#FFFFFF;
+}
+
+/* OUR-CLIENTS */
+
+.clients-icon{
+    width: 170px;
+    height: 92px; 
+    margin-left: auto;
+    margin-right: auto;
+    height: 41px;
+    width: 47px;
+}
+.client-link svg{
+    fill: #AFB1B8;
+    width: 100%;
+    height: 100%;
+}
+
+.client-link{
+    display: flex;
+    width: 170px;
+    height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;    
+}
+.clients-icon{
+    padding: 16px 32px;
+}
+
+.our-company{
+    display: flex;
+}
+
+.clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.client-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.client-link:hover,
+.client-link:focus{
+    border-color: var(--accent-color);
+}
+
+.client-link:hover .clients-icon
+{
+    fill:var(--accent-color);
+}
+
+.client-link:focus .clients-icon {
+    fill:var(--accent-color);
+}
+.client-link:focus .clients-icon {
+    background-color: #FFFFFF;
+}
+
 /* __FOOTER */
 .footer {
-    background-color: var(--hero-color);
     padding-top: 60px;
     padding-bottom: 60px;
 }
+
+.contact-wrap {
+    width: 1600px;
+    margin: 0 auto;
+    background-color: var(--hero-color);
+}
+
+.contact-wrap.container {
+
+}
+
+
 .logo-link-footer {
 font-family: 'Raleway', sans-serif;
     font-weight: 700;
